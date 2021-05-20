@@ -6,11 +6,11 @@ ASCII_CHARS = ["@", "#", "S", "%", "?", "*", "+", ";", ":", ",", "."]
 
 def pixels_to_ascii(image):
     '''
-    Transform numpy.array image to an ascii string\r\n
-    ASCII_CHARS = ["@", "#", "S", "%", "?", "*", "+", ";", ":", ",", "."]\r\n
-    11 types of stoke width in range 0 ~ 255\r\n
-    image => numpy.array\r\n
-    return type : string\r\n
+    Transform numpy.array image to an ascii string
+    ASCII_CHARS = ["@", "#", "S", "%", "?", "*", "+", ";", ":", ",", "."]
+    11 types of stoke width in range 0 ~ 255
+    image => numpy.array
+    return type : string
     '''
     pixels = image.reshape(image.shape[0]*image.shape[1]) # return Tuples of RGB color code
     # join explain: use "" to link list or tuple of str object

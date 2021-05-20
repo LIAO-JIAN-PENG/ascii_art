@@ -52,9 +52,9 @@ def bl_interpolate(img, new_width=100, new_height=100):
 
 def resize_image(image, new_width=100):
     '''
-    image => numpy.array\r\n
-    new_width => int\r\n
-    return type : numpy.array\r\n
+    image => numpy.array
+    new_width => int
+    return type : numpy.array
     '''
     width, height = image.shape[:2]
     ratio = height / width / 1.8 # scale the same ratio of width and height
