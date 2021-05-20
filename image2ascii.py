@@ -22,6 +22,12 @@ def pixels_to_ascii(image):
     return characters
 
 def image2ascii(path, new_width=100, writeFile=False):
+    '''
+    parameter:
+    path: image_file path
+    new_width : control width
+    writeFile
+    '''
     try:
         image = cv2.imread(path).astype(float)
     except:
@@ -33,8 +39,12 @@ def image2ascii(path, new_width=100, writeFile=False):
     pixel_count = len(new_image_data) # total pixel count (len of str)
     
     # output function (here)
-    for i in range(0, pixel_count-new_width, new_width):
-        print(new_image_data[i:i+new_width])
+    # for i in range(0, pixel_count-new_width, new_width):
+    #     print(new_image_data[i:i+new_width])
+    ascii_image = "\n".join(\
+                [new_image_data[index:(index+new_width)]\
+                for index in range(0, pixel_count, new_width)])
+    return ascii_image
 
     # write file
     if writeFile:
